@@ -120,9 +120,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias genlop="sudo watch -cn 2 genlop -citul"
+alias genlop="sudo watch -cn 10 genlop -citul"
 alias cat="bat"
-alias emerge_upgrade="sudo emerge --ask --tree --verbose --update --deep --changed-use @world"
+alias emerge_upgrade="sudo emerge --ask --verbose --update --deep --changed-use @world"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
