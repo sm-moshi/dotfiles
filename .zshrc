@@ -1,6 +1,3 @@
-# neofetch lol
-neofetch
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -8,11 +5,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# neofetch lol
+neofetch
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/stuartmeya/.oh-my-zsh"
+export ZSH="/home/moshi/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -81,10 +83,15 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
+	colored-man-pages
+	colorize
+	cp
 	python
 	ruby
-	git
-	)
+	screen
+	sudo
+	thefuck
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,14 +100,14 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=de_DE.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nano'
-else
-   export EDITOR='nano'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -110,18 +117,12 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases"
-alias zshconfig="nano -w ~/.zshrc"
-alias ohmyzsh="nano -w ~/.oh-my-zsh"
-alias upgrade="sudo emerge --verbose --update --changed-use --deep --ask --keep-going=y --with-bdeps=y @world"
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias genlop="sudo watch -cn 2 genlop -citul"
-alias full_upgrade="sudo emerge --sync && sudo emerge --verbose --update --newuse --deep --ask --keep-going=y --with-bdeps=y @world && sudo emerge --depclean"
-alias eix-update="sudo eix-update"
-alias top="bpytop"
-
-# ccache
-#export PATH="/usr/lib/ccache/bin${PATH:+:}$PATH"
-#export CCACHE_DIR="/mnt/Backup/ccache"
+alias cat="bat"
+alias emerge_upgrade="sudo emerge --ask --tree --verbose --update --deep --changed-use @world"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
