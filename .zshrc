@@ -120,7 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias genlop="sudo watch -cn 10 genlop -citul"
+alias genlop="sudo watch -cn 10 genlop -ci"
 alias cat="bat"
 alias upgrade="sudo emerge --ask --verbose --update --deep --changed-use @world"
 
