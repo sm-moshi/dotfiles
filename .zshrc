@@ -13,6 +13,9 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # neofetch lol
 # neofetch
 
+# setxkbmap
+setxkbmap -layout de -variant mac
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/moshi/.oh-my-zsh"
 
@@ -122,7 +125,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias genlop="sudo watch -cn 10 genlop -ci"
 alias cat="bat"
-alias upgrade="sudo emerge --ask --verbose --update --deep --changed-use @world"
+alias upgrade="sudo emerge --ask --verbose --update --deep --changed-use @world && flatpak update"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
