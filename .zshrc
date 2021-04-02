@@ -14,7 +14,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # neofetch
 
 # setxkbmap
-setxkbmap -layout de -variant mac
+# setxkbmap -layout de -variant mac
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/moshi/.oh-my-zsh"
@@ -93,7 +93,6 @@ plugins=(git
 	ruby
 	screen
 	sudo
-	thefuck
 )
 
 source $ZSH/oh-my-zsh.sh
