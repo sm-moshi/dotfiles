@@ -1,0 +1,24 @@
+[Desktop Entry]
+DefaultProfile=zsh.profile
+
+[KonsoleWindow]
+FocusFollowsMouse=true
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAAAAA/oAAARyAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIBAAABxf////8AAAAAAAAAAA==
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+eDP-1 Height 2048x1280=1214
+eDP-1 Height 2560x1600=1112
+eDP-1 Width 2048x1280=1018
+eDP-1 Width 2560x1600=1254
+eDP-1 XPosition 2048x1280=200
+eDP-1 XPosition 2560x1600=54
+eDP-1 YPosition 2048x1280=30
+eDP-1 YPosition 2560x1600=90
+
+[SplitView]
+SplitViewVisibility=AlwaysHideSplitHeader
+
+[TabBar]
+TabBarVisibility=AlwaysHideTabBar
