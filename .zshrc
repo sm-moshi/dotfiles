@@ -123,6 +123,6 @@ source $ZSH/oh-my-zsh.sh
 alias genlop="sudo watch -cn 10 genlop -ci"
 alias cat="bat"
 alias upgrade="sudo emerge --ask --verbose --update --deep --changed-use @world"
-
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
