@@ -100,9 +100,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-	export EDITOR='nano'
+	export EDITOR='vim'
 	else
-	export EDITOR='mvim'
+	export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -114,11 +114,17 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nano ~/.zshrc"
-alias ohmyzsh="nano ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias genlop="sudo watch -cn 10 genlop -ci"
 alias cat="bat"
 alias upgrade="sudo emerge --ask --verbose --update --deep --changed-use @world"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+## sccache
+export RUSTC_WRAPPER="/usr/bin/sccache"
+export SCCACHE_DIR="/var/cache/sccache"
+export SCCACHE_MAX_FRAME_LENGTH="104857600"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
