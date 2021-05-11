@@ -13,3 +13,7 @@ endtry
 set autoindent
 set number
 set spell
+set showmatch
+set mouse=a
+set autoindent
+set incsearch
