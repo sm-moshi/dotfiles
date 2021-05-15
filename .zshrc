@@ -118,10 +118,11 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias genlop="sudo watch -cn 10 genlop -ci"
 alias cat="bat"
-alias upgrade="sudo emerge --ask --verbose --update --deep --changed-use @world"
+alias upgrade="sudo emerge --ask --verbose --update --deep --newuse @world"
+alias rebuild="sudo emerge --ask --verbose --update --deep --changed-use @world"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-## sccache
+# sccache
 export RUSTC_WRAPPER="/usr/bin/sccache"
 export SCCACHE_DIR="/var/cache/sccache"
 export SCCACHE_MAX_FRAME_LENGTH="104857600"
