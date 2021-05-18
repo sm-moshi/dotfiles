@@ -24,10 +24,12 @@ set cursorline
 set spell
 set shell=/bin/zsh
 
+let g:snipMate = { 'snippet_version' : 1 }
+
 Plugin 'altercation/vim-colors-solarized'
     syntax enable
-    set background=dark
-    colorscheme solarized
+    #set background=dark
+    #colorscheme solarized
 Plugin 'nvie/vim-flake8'
 Plugin 'gentoo/gentoo-syntax'
 
