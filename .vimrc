@@ -30,6 +30,10 @@ let g:snipMate = { 'snippet_version' : 1 }
 
 Plugin 'nvie/vim-flake8'
 Plugin 'gentoo/gentoo-syntax'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+  let g:airline_theme='powerlineish'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
