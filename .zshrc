@@ -1,4 +1,4 @@
-# source /etc/profile? idk even know why, shell is buggy right now.
+# need to source profile, idk why
 source /etc/profile
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -8,10 +8,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 # If you come from bash you might have to change your $PATH.
-# export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/moshi/.oh-my-zsh"
@@ -20,7 +18,7 @@ export ZSH="/home/moshi/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,12 +80,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	colored-man-pages
-	colorize
-	cp
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,11 +92,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-	export EDITOR='vim'
-	else
-	export EDITOR='vim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -114,18 +107,16 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias genlop="sudo watch -cn 10 genlop -ci"
 alias cat="bat"
 alias upgrade="sudo emerge --ask --verbose --update --deep --newuse @world"
 alias rebuild="sudo emerge --ask --verbose --update --deep --changed-use @world"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-# sccache
-export RUSTC_WRAPPER="/usr/bin/sccache"
-export SCCACHE_DIR="/var/cache/sccache"
-export SCCACHE_MAX_FRAME_LENGTH="104857600"
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
