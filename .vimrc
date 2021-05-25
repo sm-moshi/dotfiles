@@ -3,13 +3,6 @@ syntax enable
 set nocompatible    " be iMproved, required
 filetype off        " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
 set runtimepath+=~/.vim_runtime
 
 source ~/.vim_runtime/vimrcs/basic.vim
@@ -31,12 +24,13 @@ set shell=/bin/zsh
 
 let g:snipMate = { 'snippet_version' : 1 }
 
-Plugin 'nvie/vim-flake8'
-Plugin 'gentoo/gentoo-syntax'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+call plug#begin('~/.vim/plugged')
+
+" Plugins go here
+Plug 'nvie/vim-flake8'
+Plug 'gentoo/gentoo-syntax'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='powerlineish'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
