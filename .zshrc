@@ -109,12 +109,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias genlop="sudo watch -cn 10 genlop -ci"
+alias genlop="sudo watch -cn 5 genlop -ci"
 alias cat="bat"
 alias upgrade="sudo emerge --ask --verbose --update --deep --newuse @world"
 alias rebuild="sudo emerge --ask --verbose --update --deep --changed-use @world"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
+alias vim="nvim"
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
