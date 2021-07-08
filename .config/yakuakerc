@@ -1,0 +1,20 @@
+[Appearance]
+HideSkinBorders=true
+Skin=arc-dark
+SkinInstalledWithKns=true
+TerminalHighlightOnManualActivation=true
+
+[Behavior]
+FocusFollowsMouse=true
+OpenAfterStart=true
+
+[Desktop Entry]
+DefaultProfile=Standard zsh.profile
+
+[Dialogs]
+FirstRun=false
+
+[Window]
+Height=100
+Screen=2
+Width=100

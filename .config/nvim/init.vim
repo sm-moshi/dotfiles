@@ -1,8 +1,3 @@
-syntax on
-syntax enable
-set nocompatible    " be iMproved, required
-filetype off        " required
-
 set runtimepath+=~/.vim_runtime
 
 source ~/.vim_runtime/vimrcs/basic.vim
@@ -28,9 +23,10 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins go here
 Plug 'nvie/vim-flake8'
-Plug 'gentoo/gentoo-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='powerlineish'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
+
