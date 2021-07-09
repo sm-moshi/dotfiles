@@ -116,6 +116,10 @@ export LIBVA_DRIVER_NAME="radeonsi"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
+# changing shell language
+export LANG=en_US.UTF-8
+export LANGUAGE=en
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
