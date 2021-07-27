@@ -32,6 +32,10 @@ alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 # use most instead of more or less
 export PAGER="most"
+# changing shell language
+export LANG=en_US.UTF-8
+export LANGUAGE=en
+###
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
