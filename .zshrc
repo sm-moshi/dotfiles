@@ -30,6 +30,8 @@ export LIBVA_DRIVER_NAME="radeonsi"
 # Aliases
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
+alias diff="diff --color=auto"
+alias ip="ip -color=auto"
 # use most instead of more or less
 export PAGER="most"
 # changing shell language
