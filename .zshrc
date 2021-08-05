@@ -27,6 +27,8 @@ else
 fi
 # VA-API
 export LIBVA_DRIVER_NAME="radeonsi"
+# VDPAU
+export VDPAU_DRIVER="radeonsi"
 # Aliases
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
