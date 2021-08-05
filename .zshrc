@@ -39,6 +39,8 @@ export PAGER="most"
 # changing shell language
 export LANG=en_US.UTF-8
 export LANGUAGE=en
+# Let Firefox use KDE/Dolphin File selector
+export GTK_USE_PORTAL=1
 ###
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
