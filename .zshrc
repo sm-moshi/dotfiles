@@ -34,6 +34,7 @@ alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
+alias cat="bat"
 # use most instead of more or less
 export PAGER="most"
 # changing shell language
