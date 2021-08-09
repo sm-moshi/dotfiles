@@ -35,6 +35,7 @@ alias ls="ls --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 alias cat="bat"
+alias sudo="doas"
 # use most instead of more or less
 export PAGER="most"
 # changing shell language
