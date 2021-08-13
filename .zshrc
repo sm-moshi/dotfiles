@@ -35,8 +35,9 @@ alias ls="ls --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 alias cat="bat"
-alias sudo="doas"
-alias pacpurge="doas pacman -Rsn $(pacman -Qdtq)"
+alias pacpurge="pacman -Rsn $(pacman -Qdtq)"
+# for for passing aliases to sudo
+alias sudo="sudo "
 # use most instead of more or less
 export PAGER="most"
 # changing shell language
