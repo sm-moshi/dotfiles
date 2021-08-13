@@ -36,6 +36,7 @@ alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 alias cat="bat"
 alias sudo="doas"
+alias pacpurge="doas pacman -Rsn $(pacman -Qdtq)"
 # use most instead of more or less
 export PAGER="most"
 # changing shell language
