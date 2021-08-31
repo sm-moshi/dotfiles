@@ -25,24 +25,21 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
    export EDITOR='nvim'
 fi
-# VA-API
-export LIBVA_DRIVER_NAME="radeonsi"
-# VDPAU
-export VDPAU_DRIVER="radeonsi"
 # Aliases
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 alias cat="bat"
-alias pacpurge="pacman -Rsn $(pacman -Qdtq)"
-# for for passing aliases to sudo
-alias sudo="sudo "
+# to use Fsync for Wine
+export WINEFSYNC=1 
 # use most instead of more or less
 export PAGER="most"
 # changing shell language
 export LANG=en_US.UTF-8
 export LANGUAGE=en
+#export LANG=de_DE.UTF-8
+#export LANGUAGE=de
 # Let Firefox use KDE/Dolphin File selector
 export GTK_USE_PORTAL=1
 # Let Firefox use Wayland
