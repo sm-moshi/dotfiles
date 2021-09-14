@@ -1,7 +1,6 @@
 [Appearance]
 HideSkinBorders=true
-Skin=arc-dark
-SkinInstalledWithKns=true
+Skin=adapta
 TerminalHighlightOnManualActivation=true
 
 [Behavior]

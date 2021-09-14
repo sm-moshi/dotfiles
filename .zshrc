@@ -36,10 +36,10 @@ export WINEFSYNC=1
 # use most instead of more or less
 export PAGER="most"
 # changing shell language
-export LANG=en_US.UTF-8
-export LANGUAGE=en
-#export LANG=de_DE.UTF-8
-#export LANGUAGE=de
+#export LANG=en_US.UTF-8
+#export LANGUAGE=en
+export LANG=de_DE.UTF-8
+export LANGUAGE=de
 # Let Firefox use KDE/Dolphin File selector
 export GTK_USE_PORTAL=1
 # Let Firefox use Wayland
