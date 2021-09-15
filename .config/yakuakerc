@@ -8,7 +8,7 @@ FocusFollowsMouse=true
 OpenAfterStart=true
 
 [Desktop Entry]
-DefaultProfile=Standard zsh.profile
+DefaultProfile=
 
 [Dialogs]
 FirstRun=false
