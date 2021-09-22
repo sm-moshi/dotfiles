@@ -31,6 +31,7 @@ alias ls="ls --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 alias cat="bat"
+alias genlop="sudo genlop -ci"
 # to use Fsync for Wine
 export WINEFSYNC=1 
 # use most instead of more or less
