@@ -31,7 +31,8 @@ alias ls="ls --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 alias cat="bat"
-alias genlop="sudo watch -cn 2 genlop -ci"
+alias genlop="sudo watch -cn 5 genlop -ci"
+alias tlpgui="cd /home/sm/git/TLPUI/ && python3 -m tlpui"
 
 # to use Fsync for Wine
 export WINEFSYNC=1 
