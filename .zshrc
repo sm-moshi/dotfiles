@@ -47,6 +47,8 @@ export LANGUAGE=de
 export GTK_USE_PORTAL=1
 # Let Firefox use Wayland
 export MOZ_ENABLE_WAYLAND=1
+# VDPAU stuff...
+export VDPAU_DRIVER="radeonsi"
 ###
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
