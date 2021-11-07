@@ -24,10 +24,10 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # Aliases
 alias ls="ls --color=auto"
 alias myip="curl http://ipecho.net/plain; echo"
-alias grep="grep --colour=auto"
+alias grep="grep --color=auto"
 alias eddie="cd /home/smeya/Schreibtisch/eddie-ui/bundle/ && mono eddie-ui.exe"
-=======
->>>>>>> 0b01110f39e3b02885e0396c5eda6410d4440490
+alias diff="diff --color=auto"
+alias ip="ip -color=auto"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
