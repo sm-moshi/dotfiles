@@ -17,39 +17,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-### Customize to your needs...
+# Customize to your needs...
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
-else
-   export EDITOR='nvim'
-fi
 # Aliases
-alias grep="grep --color=auto"
 alias ls="ls --color=auto"
-alias diff="diff --color=auto"
-alias ip="ip -color=auto"
-alias cat="bat"
-alias genlop="sudo watch -cn 5 genlop -ci"
-alias tlpgui="cd /home/sm/git/TLPUI/ && python3 -m tlpui"
-
-# to use Fsync for Wine
-export WINEFSYNC=1 
-# use most instead of more or less
-export PAGER="most"
-# changing shell language
-#export LANG=en_US.UTF-8
-#export LANGUAGE=en
-export LANG=de_DE.UTF-8
-export LANGUAGE=de
-# Let Firefox use KDE/Dolphin File selector
-export GTK_USE_PORTAL=1
-# Let Firefox use Wayland
-export MOZ_ENABLE_WAYLAND=1
-# VDPAU stuff...
-export VDPAU_DRIVER="radeonsi"
-###
+alias myip="curl http://ipecho.net/plain; echo"
+alias grep="grep --colour=auto"
+alias eddie="cd /home/smeya/Schreibtisch/eddie-ui/bundle/ && mono eddie-ui.exe"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
