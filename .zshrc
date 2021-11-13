@@ -26,7 +26,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
-alias manjaro_zfs="zpool list -v manjaro_zfs && sudo zfs get all manjaro_zfs/manjaro/root | grep compressratio && sudo zfs get all manjaro_zfs/manjaro/home | grep compressratio"
+alias manjaro_zfs="zpool list -v manjaro_zfs && zfs get all manjaro_zfs/manjaro/root | grep compressratio && zfs get all manjaro_zfs/manjaro/home | grep compressratio"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
