@@ -26,8 +26,16 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
-alias manjaro_zfs="zpool list -v manjaro_zfs && zfs get all manjaro_zfs/manjaro/root | grep compressratio && zfs get all manjaro_zfs/manjaro/home | grep compressratio"
+alias arch_zfs="zpool list -v zroot && zfs get all zroot/rootfs | grep compressratio && zfs get all zroot/rootfs/home | grep compressratio"
 
+# Wayland
+export QT_QPA_PLATFORM=wayland
+export MOZ_ENABLE_WAYLAND=1
+export CLUTTER_BACKEND=wayland
+export SDL_VIDEODRIVER=wayland
+
+# Firefox
+export MOZ_WEBRENDER=1
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
