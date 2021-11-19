@@ -27,6 +27,7 @@ alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
 alias arch_zfs="zpool list -v zroot && zfs get all zroot/rootfs | grep compressratio && zfs get all zroot/rootfs/home | grep compressratio"
+alias frittenbude="wpa_supplicant -B -i wlp5s0 -c <(wpa_passphrase "Heimesche Frittenbude" "Frigga.Aln!Dahe+86" )"
 
 # Wayland
 export QT_QPA_PLATFORM=wayland
@@ -36,6 +37,9 @@ export SDL_VIDEODRIVER=wayland
 
 # Firefox
 export MOZ_WEBRENDER=1
+
+# command not found
+source /usr/share/doc/find-the-command/ftc.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
