@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -29,7 +36,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 1
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -52,7 +59,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -97,9 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+alias zshconfig="kate ~/.zshrc"
+alias ohmyzsh="kate ~/.oh-my-zsh"
 
 # Wayland
 export QT_QPA_PLATFORM=wayland
@@ -118,8 +124,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 alias ip="ip -color=auto"
-alias rsync_datengrab="rsync -av --progress /home/smeya/* pi@192.168.0.212:/srv/dev-disk-by-uuid-374f2298-e92d-4b68-9971-196315aae0ef/rsync/home/smeya/ && rsync -av --progress /home/smeya/.* pi@192.168.0.212:/srv/dev-disk-by-uuid-374f2298-e92d-4b68-9971-196315aae0ef/rsync/home/smeya/ && rsync -av --progress /etc/* pi@192.168.0.212:/srv/dev-disk-by-uuid-374f2298-e92d-4b68-9971-196315aae0ef/rsync/etc/"
+alias rsync_datengrab="rsync -av --progress /home/smeya/* pi@datengrab.local:/srv/dev-disk-by-uuid-5be95da5-2cae-4991-b439-4cedce2434b9/rsync_on_btrfs/home/smeya/ && rsync -av --progress /home/smeya/.* pi@datengrab.local:/srv/dev-disk-by-uuid-5be95da5-2cae-4991-b439-4cedce2434b9/rsync_on_btrfs/home/smeya/ && rsync -av --progress /etc/* pi@datengrab.local:/srv/dev-disk-by-uuid-5be95da5-2cae-4991-b439-4cedce2434b9/rsync_on_btrfs/etc/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /usr/share/doc/pkgfile/command-not-found.zsh

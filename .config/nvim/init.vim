@@ -28,7 +28,7 @@ set hlsearch
 set number
 set cursorline
 set spell
-set shell=/bin/zsh
+set shell=/usr/bin/zsh
 
 let g:snipMate = { 'snippet_version' : 1 }
 
@@ -40,5 +40,7 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='powerlineish'
 Plug 'gentoo/gentoo-syntax'
 Plug 'sheerun/vim-polyglot'
+Plug 'joshdick/onedark.vim'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()

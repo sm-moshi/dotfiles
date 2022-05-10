@@ -3,7 +3,7 @@ Just my dotfiles.
 
 ### .zshrc:
 - .zshrc: ~/.zshrc
-- prezto: https://github.com/sorin-ionescu/prezto
+- oh-my-zsh: https://github.com/ohmyzsh/ohmyzsh
 - powerlevel10k: https://github.com/romkatv/powerlevel10k
 
 ### Neovim:
