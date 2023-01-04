@@ -40,5 +40,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'lambdalisue/battery.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
 call plug#end()
