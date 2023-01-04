@@ -1,5 +1,4 @@
 # dotfiles
-Just my dotfiles.
 
 ### .zshrc:
 - .zshrc: ~/.zshrc
