@@ -28,19 +28,17 @@ set hlsearch
 set number
 set cursorline
 set spell
-set shell=/usr/bin/zsh
+set shell=/opt/homebrew/bin/zsh
 
 let g:snipMate = { 'snippet_version' : 1 }
 
 call plug#begin('~/.vim/plugged')
 
 " Plugins go here
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='powerlineish'
-Plug 'gentoo/gentoo-syntax'
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
-Plug 'plasticboy/vim-markdown'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'lambdalisue/battery.vim'
 
 call plug#end()

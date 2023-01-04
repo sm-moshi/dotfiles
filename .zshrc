@@ -6,7 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/sbin:$PATH
+export PATH=/opt/homebrew/anaconda3/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -15,6 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -36,7 +39,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 1
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -59,7 +62,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -77,7 +80,16 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+        zsh-autosuggestions
+        web-search
+        colored-man-pages
+        colorize
+        pip
+        python
+        brew
+        macos
+        )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,11 +101,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -104,27 +116,36 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="kate ~/.zshrc"
-alias ohmyzsh="kate ~/.oh-my-zsh"
-
-# Wayland
-export QT_QPA_PLATFORM=wayland
-export MOZ_ENABLE_WAYLAND=1
-export CLUTTER_BACKEND=wayland
-export SDL_VIDEODRIVER=wayland
-
-# Firefox
-export MOZ_WEBRENDER=1
-export VDPAU_DRIVER=radeonsi
-export LIBVA_DRIVER_NAME=radeonsi
-
-# Aliases
-alias ls="ls --color=auto"
-alias myip="curl http://ipecho.net/plain; echo"
-alias grep="grep --color=auto"
-alias diff="diff --color=auto"
-alias ip="ip -color=auto"
-alias rsync_datengrab="rsync -av --progress /home/smeya/* pi@datengrab.local:/srv/dev-disk-by-uuid-5be95da5-2cae-4991-b439-4cedce2434b9/rsync_on_btrfs/home/smeya/ && rsync -av --progress /home/smeya/.* pi@datengrab.local:/srv/dev-disk-by-uuid-5be95da5-2cae-4991-b439-4cedce2434b9/rsync_on_btrfs/home/smeya/ && rsync -av --progress /etc/* pi@datengrab.local:/srv/dev-disk-by-uuid-5be95da5-2cae-4991-b439-4cedce2434b9/rsync_on_btrfs/etc/"
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias killfsck="sudo pkill -f fsck"
+alias rsync="/opt/homebrew/bin/rsync"
+alias brewup="brew update && brew upgrade --greedy && brew cleanup"
+alias code="code-insiders"
+# git signing
+export GPG_TTY=$(tty)
+# Second, tell Kubernetes client to read multiple configuration files
+for i in ~/.kube/*config; do KUBECONFIG=$KUBECONFIG:$i; done; export KUBECONFIG
+# Kubectl edit command will use this env var.
+export EDITOR=nvim
+# Should your editor deal with streamed vs on disk files differently, also set...
+export K9S_EDITOR=nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/smeya/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/smeya/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/smeya/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/smeya/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
