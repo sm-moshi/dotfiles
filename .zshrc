@@ -92,6 +92,7 @@ plugins=(git
         )
 
 source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
 
 # User configuration
 
@@ -121,7 +122,6 @@ source $ZSH/oh-my-zsh.sh
 alias killfsck="sudo pkill -f fsck"
 alias rsync="/opt/homebrew/bin/rsync"
 alias brewup="brew update && brew upgrade --greedy && brew cleanup"
-alias code="code-insiders"
 # git signing
 export GPG_TTY=$(tty)
 # Second, tell Kubernetes client to read multiple configuration files
@@ -149,3 +149,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# mattermost server local compiling
+ulimit -n 8096
+
+source /Users/smeya/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

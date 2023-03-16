@@ -29,6 +29,7 @@ set number
 set cursorline
 set spell
 set shell=/opt/homebrew/bin/zsh
+set rtp+=/opt/homebrew/opt/fzf
 
 let g:snipMate = { 'snippet_version' : 1 }
 
@@ -42,5 +43,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'lambdalisue/battery.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'dense-analysis/ale'
+Plug 'junegunn/fzf'
+
+let g:ale_linters = {
+    \ 'sh': ['language_server'],
+    \ }
 
 call plug#end()
