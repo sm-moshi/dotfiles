@@ -8,7 +8,6 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/opt/homebrew/sbin:$PATH
-export PATH=/opt/homebrew/anaconda3/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -36,7 +35,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 zstyle ':omz:update' frequency 1
@@ -81,6 +80,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
+        fast-syntax-highlighting      
         zsh-autosuggestions
         web-search
         colored-man-pages
@@ -117,41 +117,15 @@ source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias killfsck="sudo pkill -f fsck"
 alias rsync="/opt/homebrew/bin/rsync"
 alias brewup="brew update && brew upgrade --greedy && brew cleanup"
-# git signing
-export GPG_TTY=$(tty)
-# Second, tell Kubernetes client to read multiple configuration files
-for i in ~/.kube/*config; do KUBECONFIG=$KUBECONFIG:$i; done; export KUBECONFIG
-# Kubectl edit command will use this env var.
-export EDITOR=nvim
-# Should your editor deal with streamed vs on disk files differently, also set...
-export K9S_EDITOR=nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/smeya/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/smeya/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/smeya/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/smeya/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# mattermost server local compiling
-ulimit -n 8096
-
 source /Users/smeya/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/opt/libpcap/bin:$PATH"

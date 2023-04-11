@@ -1,4 +1,4 @@
-#!//opt/homebrew/bin/bash
+#!/bin/sh
 
 cp ~/.zshrc .
 echo "copied .zshrc"
