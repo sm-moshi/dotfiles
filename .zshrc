@@ -117,10 +117,10 @@ source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-
 alias killfsck="sudo pkill -f fsck"
 alias rsync="/opt/homebrew/bin/rsync"
 alias brewup="brew update && brew upgrade --greedy && brew cleanup"
+alias neofetch="fastfetch"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -128,4 +128,7 @@ alias brewup="brew update && brew upgrade --greedy && brew cleanup"
 source /Users/smeya/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Custom Homebrew options
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 export PATH="/opt/homebrew/opt/libpcap/bin:$PATH"
+
