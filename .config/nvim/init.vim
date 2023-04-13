@@ -47,7 +47,16 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf'
 
 let g:ale_linters = {
-    \ 'sh': ['language_server'],
-    \ }
+\ 'sh': ['bash-language_server'],
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\   'html': ['prettier'],
+\   'json': ['prettier'],
+\   'markdown': ['prettier'],
+\   'yaml': ['prettier'],
+\}
+
+let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
 
 call plug#end()
