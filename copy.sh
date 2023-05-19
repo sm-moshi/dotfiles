@@ -3,6 +3,9 @@
 cp ~/.zshrc .
 echo "copied .zshrc"
 
+cp ~/.antigen .
+echo "copied .antigen"
+
 cp ~/.config/konsolerc .
 echo "copied konsolerc"
 
