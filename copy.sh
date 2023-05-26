@@ -11,8 +11,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS
     cp ~/.zshrc zshrc_macos
     cp ~/.antigen antigen_macos
-    cp ~/.config/konsolerc konsolerc_macos
-    cp ~/.config/yakuakerc yakuakerc_macos
     cp ~/.config/nvim/init.vim nvim-init_macos.vim
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
     # FreeBSD
