@@ -2,23 +2,23 @@
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Linux
-    cp ~/.zshrc .zshrc_linux
-    cp ~/.antigen .antigen_linux
-    cp ~/.config/konsolerc .config_linux/konsolerc_linux
-    cp ~/.config/yakuakerc .config_linux/yakuakerc_linux
-    cp ~/.config/nvim/init.vim .config_linux/nvim/init.vim
+    rsync -avz ~/.zshrc .zshrc_linux
+    rsync -avz ~/.antigen .antigen_linux
+    rsync -avz ~/.config/konsolerc .config_linux/konsolerc_linux
+    rsync -avz ~/.config/yakuakerc .config_linux/yakuakerc_linux
+    rsync -avz ~/.config/nvim/init.vim .config_linux/nvim/init.vim
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS
-    cp ~/.zshrc .zshrc_macos
-    cp ~/.antigen .antigen_macos
-    cp ~/.config/nvim/init.vim .config_macos/nvim/init.vim
+    rsync -avz ~/.zshrc .zshrc_macos
+    rsync -avz ~/.antigen .antigen_macos
+    rsync -avz ~/.config/nvim/init.vim .config_macos/nvim/init.vim
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
     # FreeBSD
-    cp ~/.zshrc .zshrc_freebsd
-    cp ~/.antigen .antigen_freebsd
-    cp ~/.config/konsolerc konsolerc_freebsd
-    cp ~/.config/yakuakerc yakuakerc_freebsd
-    cp ~/.config/nvim/init.vim .config_freebsd/nvim/init.vim
+    rsync -avz ~/.zshrc .zshrc_freebsd
+    rsync -avz ~/.antigen .antigen_freebsd
+    rsync -avz ~/.config/konsolerc konsolerc_freebsd
+    rsync -avz ~/.config/yakuakerc yakuakerc_freebsd
+    rsync -avz ~/.config/nvim/init.vim .config_freebsd/nvim/init.vim
 else
     echo "Unsupported operating system: $OSTYPE"
     exit 1
