@@ -29,7 +29,7 @@ set number
 set cursorline
 set spell
 set shell=/opt/homebrew/bin/zsh
-set rtp+=/opt/homebrew/opt/fzf
+" set rtp+=/opt/homebrew/opt/fzf
 
 let g:snipMate = { 'snippet_version' : 1 }
 
@@ -40,7 +40,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'lambdalisue/battery.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'dense-analysis/ale'
