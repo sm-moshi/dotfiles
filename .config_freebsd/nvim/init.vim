@@ -28,8 +28,8 @@ set hlsearch
 set number
 set cursorline
 set spell
-set shell=/opt/homebrew/bin/zsh
-set rtp+=/opt/homebrew/opt/fzf
+set shell=/usr/local/bin/zsh
+"set rtp+=/opt/homebrew/opt/fzf
 
 let g:snipMate = { 'snippet_version' : 1 }
 
@@ -44,7 +44,7 @@ Plug 'lambdalisue/battery.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'dense-analysis/ale'
-Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf'
 
 " Enable completion where available.
 " This setting must be set before ALE is loaded.
@@ -67,3 +67,4 @@ let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 
 call plug#end()
+
