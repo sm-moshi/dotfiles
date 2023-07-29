@@ -1,4 +1,4 @@
-#files: 1111	version: 5.9
+#files: 1135	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -96,6 +96,7 @@ _comps=(
 'VBoxHeadless' '_virtualbox'
 'VBoxManage' '_virtualbox'
 '_arguments' '__arguments'
+'_kind' '_kind'
 'a2dismod' '_a2utils'
 'a2dissite' '_a2utils'
 'a2enmod' '_a2utils'
@@ -186,6 +187,7 @@ _comps=(
 'basename' '_basename'
 'basenc' '_basenc'
 'bash' '_bash'
+'bat' '_bat'
 'batch' '_at'
 'baz' '_baz'
 'beadm' '_beadm'
@@ -210,6 +212,7 @@ _comps=(
 'bpython3-gtk' '_bpython'
 'bpython3-urwid' '_bpython'
 'brctl' '_brctl'
+'brew' '_brew'
 'bsdconfig' '_bsdconfig'
 'bsdgrep' '_grep'
 'bsdinstall' '_bsdinstall'
@@ -245,6 +248,8 @@ _comps=(
 'cal' '_cal'
 'calendar' '_calendar'
 'cap' '_cap'
+'cargo' '_cargo'
+'carthage' '_carthage'
 'cask' '_cask'
 'cat' '_cat'
 'catchsegv' '_precommand'
@@ -359,6 +364,7 @@ _comps=(
 'dad' '_dad'
 'dak' '_dak'
 'darcs' '_darcs'
+'dart' '_dart'
 'dash' '_sh'
 'date' '_date'
 'dbus-launch' '_dbus'
@@ -421,6 +427,8 @@ _comps=(
 'dnf-2' '_dnf'
 'dnf-3' '_dnf'
 'doas' '_doas'
+'docker' '_docker'
+'dockerd' '_docker'
 'docpad' '_docpad'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
@@ -637,14 +645,9 @@ _comps=(
 'gist' '_gist'
 'git' '_git'
 'git-buildpackage' '_git-buildpackage'
-'git-cvsserver' '_git'
 'git-flow' '_git-flow'
 'git-pulls' '_git-pulls'
-'git-receive-pack' '_git'
 'git-revise' '_git-revise'
-'git-shell' '_git'
-'git-upload-archive' '_git'
-'git-upload-pack' '_git'
 'git-wtf' '_git-wtf'
 'gitk' '_git'
 'gjoin' '_join'
@@ -792,6 +795,7 @@ _comps=(
 'head' '_head'
 'heat' '_openstack'
 'hello' '_hello'
+'helm' '_helm'
 'help' '_sccs'
 'hexdump' '_hexdump'
 'hilite' '_precommand'
@@ -877,7 +881,9 @@ _comps=(
 'jot' '_jot'
 'jq' '_jq'
 'jrnl' '_jrnl'
+'k9s' '_k9s'
 'kak' '_kak'
+'kctx' '_kubectx'
 'kdeconnect-cli' '_kdeconnect'
 'kdump' '_kdump'
 'keystone' '_openstack'
@@ -886,12 +892,14 @@ _comps=(
 'kill' '_kill'
 'killall' '_killall'
 'killall5' '_killall'
+'kind' '_kind'
 'kioclient' '_kfmclient'
 'kitchen' '_kitchen'
 'kldload' '_kld'
 'kldunload' '_kld'
 'knife' '_knife'
 'knock' '_knock'
+'kns' '_kubens'
 'konqueror' '_webbrowser'
 'kpartx' '_kpartx'
 'kpdf' '_pdf'
@@ -899,6 +907,9 @@ _comps=(
 'ksh88' '_sh'
 'ksh93' '_sh'
 'ktrace' '_ktrace'
+'kubectl' '_kubectl'
+'kubectx' '_kubectx'
+'kubens' '_kubens'
 'kvno' '_kvno'
 'last' '_last'
 'lastb' '_last'
@@ -933,6 +944,7 @@ _comps=(
 'locale' '_locale'
 'localedef' '_localedef'
 'locate' '_locate'
+'log' '_nothing'
 'logger' '_logger'
 'logname' '_nothing'
 'look' '_look'
@@ -1008,6 +1020,7 @@ _comps=(
 'mere' '_mere'
 'merge' '_rcs'
 'mergechanges' '_mergechanges'
+'meson' '_meson'
 'metaflac' '_flac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
@@ -1022,9 +1035,11 @@ _comps=(
 'middleman' '_middleman'
 'mii-tool' '_mii-tool'
 'mina' '_mina'
+'minikube' '_minikube'
 'mistral' '_openstack'
 'mix' '_mix'
 'mixerctl' '_mixerctl'
+'mkcert' '_mkcert'
 'mkdir' '_mkdir'
 'mkfifo' '_mkfifo'
 'mkisofs' '_growisofs'
@@ -1116,6 +1131,7 @@ _comps=(
 'nginx' '_nginx'
 'ngrep' '_ngrep'
 'nice' '_nice'
+'ninja' '_ninja'
 'nkf' '_nkf'
 'nl' '_nl'
 'nm' '_nm'
@@ -1165,6 +1181,7 @@ _comps=(
 'p4d' '_perforce'
 'pack' '_pack'
 'packf' '_mh'
+'page' '_page'
 'pandoc' '_pandoc'
 'parsehdlist' '_urpmi'
 'passwd' '_users'
@@ -1275,6 +1292,7 @@ _comps=(
 'print' '_print'
 'printenv' '_printenv'
 'printf' '_print'
+'procs' '_procs'
 'procstat' '_procstat'
 'prompt' '_prompt'
 'protoc' '_protoc'
@@ -1526,6 +1544,7 @@ _comps=(
 'stat' '_stat'
 'status' '_initctl'
 'stdbuf' '_stdbuf'
+'stern' '_stern'
 'stg' '_stgit'
 'stop' '_initctl'
 'stow' '_stow'
@@ -1595,7 +1614,6 @@ _comps=(
 'tg' '_topgit'
 'thor' '_thor'
 'tidy' '_tidy'
-'tig' '_git'
 'time' '_precommand'
 'timeout' '_timeout'
 'times' '_nothing'
@@ -1635,6 +1653,8 @@ _comps=(
 'truncate' '_truncate'
 'truss' '_truss'
 'tryaffix' '_ispell'
+'ts-node' '_ts-node'
+'tsc' '_tsc'
 'tty' '_tty'
 'ttyctl' '_ttyctl'
 'tunctl' '_uml'
@@ -1813,12 +1833,11 @@ _comps=(
 'xz' '_xz'
 'xzcat' '_xz'
 'yafc' '_yafc'
-'yaourt' '_yaourt'
-'yaourt.static' '_yaourt'
 'yarn' '_yarn'
 'yash' '_sh'
 'yast' '_yast'
 'yast2' '_yast'
+'ykman' '_ykman'
 'ypbind' '_yp'
 'ypcat' '_yp'
 'ypmatch' '_yp'
@@ -1911,6 +1930,8 @@ _services=(
 'gzcat' 'gunzip'
 'https' 'http'
 'iceweasel' 'firefox'
+'kctx' 'kubectx'
+'kns' 'kubens'
 'lzcat' 'unxz'
 'lzma' 'xz'
 'mailx' 'mail'
@@ -1931,7 +1952,6 @@ _services=(
 'xelatex' 'latex'
 'xetex' 'tex'
 'xzcat' 'unxz'
-'yaourt.static' 'yaourt'
 'zf_chgrp' 'chgrp'
 'zf_chown' 'chown'
 )
@@ -2006,7 +2026,11 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _SUSEconfig __arguments _a2ps _a2utils _aap \
+autoload -Uz _bat _brew _brew_services _cargo _carthage \
+            _docker _git _helm _k9s _kind \
+            _kubectl _kubectx _kubens _meson _minikube \
+            _ninja _page _procs _stern _ykman \
+            _SUSEconfig __arguments _a2ps _a2utils _aap \
             _abcde _absolute_command_paths _ack _acpi _acpitool \
             _acroread _adb _add-zle-hook-widget _add-zsh-hook _alias \
             _aliases _all_labels _all_matches _alsa-utils _alternative \
@@ -2204,30 +2228,31 @@ autoload -Uz _SUSEconfig __arguments _a2ps _a2utils _aap \
             _cap _cask _ccache _cf _choc \
             _chromium _clang-check _clang-format _clang-tidy _cmake \
             _coffee _conan _concourse _console _cppcheck \
-            _dad _dget _dhcpcd _diana _direnv \
-            _docpad _drush _ecdsautil _emacs _emacsclient \
-            _emulator _envdir _exportfs _fab _fail2ban-client \
-            _ffind _fleetctl _flutter _fvm _fwupdmgr \
-            _gas _ghc _gist _git-flow _git-pulls \
-            _git-revise _git-wtf _glances _golang _google \
-            _gpgconf _grpcurl _gtk-launch _hello _hledger \
-            _homestead _httpie _ibus _include-what-you-use _inxi \
-            _jmeter _jmeter-plugins _jonas _jrnl _kak \
-            _kitchen _knife _language_codes _lilypond _lunchy \
-            _mc _middleman _mina _mix _mssh \
-            _mussh _mvn _nano _nanoc _neofetch \
-            _networkQuality _nftables _node _nvm _openssl \
-            _openvpn3 _optirun _patool _periscope _pgsql_utils \
-            _phing _pixz _pkcon _play _pm2 \
-            _port _protoc _pygmentize _qmk _rails \
-            _ralio _redis-cli _rfkill _rkt _rmlint \
-            _rslsync _rspec _rsvm _rubocop _sbt \
-            _scala _screencapture _scrub _sdd _sdkmanager \
-            _setcap _setup.py _sfdx _shellcheck _showoff \
-            _srm _stack _subliminal _supervisorctl _svm \
-            _teamocil _thor _tmuxinator _tmuxp _tox \
-            _udisksctl _ufw _virtualbox _vnstat _wemux \
-            _wg-quick _xsel _yaourt _yarn _zcash-cli
+            _dad _dart _dget _dhcpcd _diana \
+            _direnv _docpad _drush _ecdsautil _emacs \
+            _emacsclient _emulator _envdir _exportfs _fab \
+            _fail2ban-client _ffind _fleetctl _flutter _fvm \
+            _fwupdmgr _gas _ghc _gist _git-flow \
+            _git-pulls _git-revise _git-wtf _glances _golang \
+            _google _gpgconf _grpcurl _gtk-launch _hello \
+            _hledger _homestead _httpie _ibus _include-what-you-use \
+            _inxi _jmeter _jmeter-plugins _jonas _jrnl \
+            _kak _kitchen _knife _language_codes _lilypond \
+            _lunchy _mc _middleman _mina _mix \
+            _mkcert _mssh _mussh _mvn _nano \
+            _nanoc _neofetch _networkQuality _nftables _node \
+            _nvm _openssl _openvpn3 _optirun _patool \
+            _periscope _pgsql_utils _phing _pixz _pkcon \
+            _play _pm2 _port _protoc _pygmentize \
+            _qmk _rails _ralio _redis-cli _rfkill \
+            _rkt _rmlint _rslsync _rspec _rsvm \
+            _rubocop _sbt _scala _screencapture _scrub \
+            _sdd _sdkmanager _setcap _setup.py _sfdx \
+            _shellcheck _showoff _srm _stack _subliminal \
+            _supervisorctl _svm _teamocil _thor _tmuxinator \
+            _tmuxp _tox _ts-node _tsc _udisksctl \
+            _ufw _virtualbox _vnstat _wemux _wg-quick \
+            _xsel _yarn _zcash-cli
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs
