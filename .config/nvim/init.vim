@@ -28,8 +28,7 @@ set hlsearch
 set number
 set cursorline
 set spell
-set shell=/opt/homebrew/bin/zsh
-" set rtp+=/opt/homebrew/opt/fzf
+set shell=/bin/bash
 
 let g:snipMate = { 'snippet_version' : 1 }
 
@@ -42,27 +41,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-Plug 'dense-analysis/ale'
-Plug 'junegunn/fzf'
-
-" Enable completion where available.
-" This setting must be set before ALE is loaded.
-"
-" You should not turn this setting on if you wish to use ALE as a completion
-" source for other completion plugins, like Deoplete.
-let g:ale_completion_enabled = 1
-
-let g:ale_linters = {
-\ 'sh': ['bash-language_server'],
-\   'javascript': ['prettier'],
-\   'css': ['prettier'],
-\   'html': ['prettier'],
-\   'json': ['prettier'],
-\   'markdown': ['prettier'],
-\   'yaml': ['prettier'],
-\}
-
-let g:ale_linters_explicit = 1
-let g:ale_fix_on_save = 1
+Plug 'gentoo/gentoo-syntax'
 
 call plug#end()
