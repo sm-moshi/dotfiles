@@ -1,33 +1,108 @@
 .DS_Store
-.config/.DS_Store
 .gitattributes
 
-.antigen_freebsd/.antigen/bundles/robbyrussell/oh-my-zsh
+# FreeBSD
+.antigen_freebsd/.antigen/bundles/
 
-.antigen_freebsd/.antigen/bundles/romkatv/powerlevel10k
+# macOS
+.antigen_macos/.antigen/bundles/
 
-.antigen_freebsd/.antigen/bundles/zdharma-continuum/fast-syntax-highlighting
+# Antigen Bundles
+.antigen_linux/bundles/
 
-.antigen_freebsd/.antigen/bundles/zsh-users/zsh-autosuggestions
+# JPEG
+*.jpg
+*.jpeg
+*.jpe
+*.jif
+*.jfif
+*.jfi
 
-.antigen_freebsd/.antigen/bundles/zsh-users/zsh-completions
+# JPEG 2000
+*.jp2
+*.j2k
+*.jpf
+*.jpx
+*.jpm
+*.mj2
 
-.antigen_macos/.antigen/bundles/robbyrussell/oh-my-zsh
+# JPEG XR
+*.jxr
+*.hdp
+*.wdp
 
-.antigen_macos/.antigen/bundles/romkatv/powerlevel10k
+# Graphics Interchange Format
+*.gif
 
-.antigen_macos/.antigen/bundles/zdharma-continuum/fast-syntax-highlighting
+# RAW
+*.raw
 
-.antigen_macos/.antigen/bundles/zsh-users/zsh-autosuggestions
+# Web P
+*.webp
 
-.antigen_macos/.antigen/bundles/zsh-users/zsh-completions
+# Portable Network Graphics
+*.png
 
-.antigen_macos/.antigen/bundles/zsh-users/zsh-syntax-highlighting
+# Animated Portable Network Graphics
+*.apng
 
-.antigen/bundles/robbyrussell/
+# Multiple-image Network Graphics
+*.mng
 
-.antigen/bundles/romkatv/
+# Tagged Image File Format
+*.tiff
+*.tif
 
-.antigen/bundles/zdharma-continuum/
+# Scalable Vector Graphics
+*.svg
+*.svgz
 
-.antigen/bundles/zsh-users/
+# Portable Document Format
+*.pdf
+
+# X BitMap
+*.xbm
+
+# BMP
+*.bmp
+*.dib
+
+# ICO
+*.ico
+
+# 3D Images
+*.3dm
+*.max
+
+# It's better to unpack these files and commit the raw source because
+# git has its own built in compression methods.
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.gzip
+*.tgz
+*.bzip
+*.bzip2
+*.bz2
+*.xz
+*.lzma
+*.cab
+*.xar
+
+# Packing-only formats
+*.iso
+*.tar
+
+# Package management formats
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+*.msi
+*.msm
+*.msp
+*.txz

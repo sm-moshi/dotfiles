@@ -29,7 +29,6 @@ set number
 set cursorline
 set spell
 set shell=/usr/local/bin/zsh
-"set rtp+=/opt/homebrew/opt/fzf
 
 let g:snipMate = { 'snippet_version' : 1 }
 
@@ -44,7 +43,6 @@ Plug 'lambdalisue/battery.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'dense-analysis/ale'
-" Plug 'junegunn/fzf'
 
 " Enable completion where available.
 " This setting must be set before ALE is loaded.
